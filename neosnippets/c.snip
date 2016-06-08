@@ -87,9 +87,11 @@ abbr        enum {}
 
 # hard-tab is necessary; C indent doesn't support this.
 snippet main
+alias m
 options     head
-	int main(int argc, char const* argv[]) {
+	int main(int argc, char* argv[]) {
 		${0:TARGET}
+
 		return EXIT_SUCCESS;
 	}
 
@@ -158,7 +160,7 @@ options     head
 
     int main(int argc, char const* argv[]) {
 
-        prinft("hello, world!\n");
+        prinft("hello, world!\n");${0}
 
         return EXIT_SUCCESS;
     }
