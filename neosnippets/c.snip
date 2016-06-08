@@ -151,20 +151,23 @@ snippet sizeof
 alias size
     sizeof(${0:TARGET})
 
-snippet helloworld
+snippet hello
 options     head
     #include <stdio.h>
-    int main(int argc, char const* argv[])
-    {
-        puts("hello, world!");
-        return 0;
+    #include <stdlib.h>
+
+    int main(int argc, char const* argv[]) {
+
+        prinft("hello, world!\n");
+
+        return EXIT_SUCCESS;
     }
 
 snippet     intro
 abbr        intro
 options     head
     // `expand('%:t')`
-    // Callum Howard strftime("%Y")
+    // Callum Howard `strftime("%Y")`
 
     ${0}
 
