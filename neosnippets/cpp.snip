@@ -91,14 +91,16 @@ snippet     dynamic_cast
 abbr        dynamic_cast<>()
     dynamic_cast<${1}>(${2})${0}
 
-snippet     helloworld
+snippet     hello
 abbr        #include<iostream> int main...
     #include <iostream>
+    #include <cstdlib>
 
-    int main(int argc, char const* argv[])
-    {
+    int main(int argc, char* argv[]) {
+
         std::cout << "hello, world!" << std::endl;
-        return 0;
+
+        return EXIT_SUCCESS;
     }
 
 snippet     p

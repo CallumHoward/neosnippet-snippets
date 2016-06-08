@@ -88,10 +88,9 @@ abbr        enum {}
 # hard-tab is necessary; C indent doesn't support this.
 snippet main
 options     head
-	int main(int argc, char const* argv[])
-	{
+	int main(int argc, char const* argv[]) {
 		${0:TARGET}
-		return 0;
+		return EXIT_SUCCESS;
 	}
 
 # #include <...>
@@ -160,6 +159,14 @@ options     head
         puts("hello, world!");
         return 0;
     }
+
+snippet     intro
+abbr        intro
+options     head
+    // `expand('%:t')`
+    // Callum Howard strftime("%Y")
+
+    ${0}
 
 snippet fopen
 abbr fopen("...", "...");
