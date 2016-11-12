@@ -93,15 +93,16 @@ abbr        dynamic_cast<>()
 
 snippet     hello
 alias       h
+options head
     #include <iostream>
 
     int main() {
 
-        std::cout << "hello, world!" << std::endl;
+        std::cout << "hello, world!" << std::endl;${0}
 
         return 0;
     }
 
 snippet     p
 options     head
-  std::cout << ${0:TARGET} << std::endl;
+    std::cout << ${0:TARGET} << std::endl;

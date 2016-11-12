@@ -29,7 +29,7 @@ abbr        if () {} else {}
 snippet     for
 options     head
 abbr        for () {}
-    for (${1:int} ${2:i} = ${3:0}; $2 < ${4}; $2++) {
+    for (${1:int} ${2:i} = ${3:0}; $2 < ${4}; ++$2) {
         ${0:#:TARGET}
     }
 
@@ -87,9 +87,15 @@ abbr        enum {}
 
 # hard-tab is necessary; C indent doesn't support this.
 snippet main
+alias m
 options     head
+<<<<<<< HEAD
 	int main() {
+=======
+	int main(int argc, char *argv[]) {
+>>>>>>> aebc71c42d8d533bcf78192ff0a24a0f524b9945
 		${0:TARGET}
+
 		return EXIT_SUCCESS;
 	}
 
@@ -160,7 +166,7 @@ options     head
 
     int main() {
 
-        printf("hello, world!\n");
+        printf("hello, world!\n");${0}
 
         return EXIT_SUCCESS;
     }
@@ -170,7 +176,7 @@ abbr        intro
 alias       i
 options     head
     // `expand('%:t')`
-    // Callum Howard `strftime("%Y")`
+    // Callum Howard, `strftime("%Y")`
 
     ${0}
 
