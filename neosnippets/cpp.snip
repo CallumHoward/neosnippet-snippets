@@ -92,15 +92,14 @@ abbr        dynamic_cast<>()
     dynamic_cast<${1}>(${2})${0}
 
 snippet     hello
-abbr        #include<iostream> int main...
+alias       h
     #include <iostream>
-    #include <cstdlib>
 
-    int main(int argc, char* argv[]) {
+    int main() {
 
         std::cout << "hello, world!" << std::endl;
 
-        return EXIT_SUCCESS;
+        return 0;
     }
 
 snippet     p
