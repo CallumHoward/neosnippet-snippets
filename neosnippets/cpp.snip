@@ -3,7 +3,7 @@ include c.snip
 # #include <...>
 snippet inc
 options		head
-alias	#inc, #include
+alias	#, #inc, #include
 	#include <${1:iostream}>
 	${0}
 
@@ -108,4 +108,4 @@ options head
 
 snippet		p
 options		head
-	std::cout << ${0:TARGET} << std::endl;
+	std::cout << ${0:TARGET} << '\n';
