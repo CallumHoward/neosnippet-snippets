@@ -4,12 +4,15 @@ include c.snip
 snippet inc
 options     head
 alias   #inc, #include
-    #include <${1:iostream}>${0}
+    #include <${1:iostream}>
+    ${0}
+
 # #include "..."
 snippet inc2
 options     head
 alias   #inc2, #include2
-    #include "${1}"${0}
+    #include "${1}"
+    ${0}
 
 snippet     template
 abbr        template <T>
