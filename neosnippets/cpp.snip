@@ -109,3 +109,7 @@ options head
 snippet		p
 options		head
 	std::cout << ${0:TARGET} << '\n';
+
+snippet     vector
+alias		vec
+    std::vector<${0:TYPE}>(${1});${2}
